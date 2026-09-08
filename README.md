@@ -1,2 +1,2 @@
 ## Custom shell in C
-**WIP**
+**WIP** shell in c
