@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+read -p "b for build: " build_path
+
+# -- Choose build_path --
+# Normal
+
+if [ "$build_path" = "b" ]; then
+	gcc -Wall -Wextra -o ./bin/run main.c 
+	./bin/run
+fi
+
+
