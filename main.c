@@ -1,8 +1,38 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/wait.h>
+#include <string.h>
 
-int main(void) {
+int main(int argc, char *argv[]) {
 
-	printf("Hello, World!");
+	char buf[1024];
+
+	// Prompt
+	printf("$ ");
+
+	// Get input from keyboard
+	fgets(buf, 1024, stdin);
 	
-	return 0;
+	// Trim newline
+	char *nl = strchr(buf, '\n');
+	if (nl) *nl = '\0';
+
+	// buf[strcspn(buf, '\n')] = 0;
+	// printf("String: %s", buf);
+
+
+	// Fork and exec
+	pid_t pid = fork();
+
+	if (pid > 0) {
+		// Parent
+		wait(NULL);
+	}
+	else {
+		// Child
+		execlp(buf, buf, NULL);
+		// Something went wrong
+		fprintf(stderr, "Could not exec %s\n", buf);
+	}
 }
