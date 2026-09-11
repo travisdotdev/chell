@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -euo pipefail
+
 read -p "b for build: " build_path
 
 # -- Choose build_path --
