@@ -8,8 +8,12 @@ read -p "b for build: " build_path
 # Normal
 
 if [ "$build_path" = "b" ]; then
-	gcc -Wall -Wextra -o ./bin/run main.c 
-	./bin/run
+	mkdir -p bin
+	if gcc -Wall -Wextra -Iinclude -o bin/chell main.c src/chell.c; then
+		./bin/chell
+	else
+		echo "build failed"
+	fi
 fi
 
 
