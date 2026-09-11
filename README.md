@@ -4,9 +4,9 @@
 #### Build
 1. chmod +x build
 2. ./build
-<<<<<<< HEAD
 3. enter 'b' for standard build path
-=======
+4. enter command e.g. ls -al, date
 
-enter 'b' for standard build path
->>>>>>> refs/remotes/origin/main
+
+##### Features
+1. Can invoke the compiler on itself (kinda cool)
