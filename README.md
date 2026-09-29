@@ -6,8 +6,7 @@ every command you run in a terminal.
 
 **Status: WIP.** Currently reads and executes a single command, then exits.
 
-[Page](https://github.com/travisdotdev/chell)
----
+- [site](https://github.com/travisdotdev/chell)
 
 ## Build
 
